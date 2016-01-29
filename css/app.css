@@ -1,0 +1,13 @@
+.full-height{
+    height: 100%;
+}
+
+.infobar{
+    background-color: #383D3F;
+    color: #C2C4C4;
+}
+
+.sidebar,
+.realm{
+    background-color: #FFFFFF;
+}
