@@ -1,6 +1,6 @@
 $(document).foundation();
 
-$('.realm--left').slick({
+$('.realm__slider--left').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: 'progressive',
@@ -10,7 +10,7 @@ $('.realm--left').slick({
     pauseOnHover: false
 });
 
-$('.realm--right').slick({
+$('.realm__slider--right').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: 'progressive',

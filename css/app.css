@@ -153,6 +153,7 @@
  */
 .realm{
     padding: 0;
+    position: relative;
 }
 
 .slick-list,
@@ -164,7 +165,12 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate3d(-50%, -50%, 0px);
+    transform: translate3d(-50%, -50%, 0px) scale(1.12);
     width: auto;
     max-width: none;
+}
+
+.realm__imagecontainer:hover .realm__image{
+    opacity: 0.5;
+    transform: translate3d(-50%, -50%, 0px) scale(1);
 }
