@@ -1,4 +1,11 @@
 /*
+ * Primary : 95c11f (vert)
+ * Secondary : 6c6d70 (gris clair)
+ * Body : 3c3c3b (gris foncé)
+ * Header : 95c11f
+ */
+
+/*
  * Icons
  */
 @import url('./foundation-icons.css');
@@ -37,7 +44,7 @@
  * Infobar
  */
 .infobar{
-    background-color: #222222;
+    background-color: #3c3c3b;
     color: #C2C4C4;
     padding: 0;
 }
@@ -60,16 +67,16 @@
 }
 
 .infobar__item.is-active{
-    background-color: #171515;
+    background-color: #6c6d70;
 }
 
 .infobar__item:first-child{
-    border-top: 1px solid #464B4D;
+    border-top: 1px solid #6c6d70;
 }
 
 .infobar__item:last-child{
-    border-top: 1px solid #464B4D;
-    border-bottom: 1px solid #464B4D;
+    border-top: 1px solid #6c6d70;
+    border-bottom: 1px solid #6c6d70;
 }
 
 .infobar__icon{
@@ -83,10 +90,12 @@
 }
 
 .menu{
-    background-color: #171515;
+    background-color: #6c6d70;
     border: none;
+    border-top: 1px solid #6c6d70;
     min-width: 300px;
     padding: 30px;
+    top: -1px;
 }
 
 .infobar__subsubmenu{
@@ -134,12 +143,12 @@
 }
 
 .title__link{
-    color: #222222;
     font-weight: bold;
+    color: #3c3c3b;
 }
 
 .title__subtitle{
-    color: #2BA6CB;
+    color: #95C11F;
     font-weight: lighter;
 }
 
