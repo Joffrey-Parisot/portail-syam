@@ -174,12 +174,63 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate3d(-50%, -50%, 0px) scale(1.12);
     width: auto;
     max-width: none;
+    transform: translate3d(-50%, -50%, 0px) scale(1.12);
+    transition: transform 0.35s;
 }
 
-.realm__imagecontainer:hover .realm__image{
-    opacity: 0.5;
+.realm__link{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(149, 193, 31, 0.1);
+    transition: background 0.35s;
+}
+
+.realm__link:before{
+    content: '';
+    position: absolute;
+    border: 1px solid #fff;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 0.35s, transform 0.35s;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+}
+
+.realm__link:hover{
+    background-color: rgba(149, 193, 31, 0.5);
+}
+
+.realm__link:hover:before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.realm__link:hover + .realm__slider .realm__image{
     transform: translate3d(-50%, -50%, 0px) scale(1);
+}
+
+.realm__title{
+    padding: 20% 0 20px 0;
+    color: #FFFFFF;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.realm__title--bold{
+    font-weight: bold;
+}
+
+.reaml__description{
+    color: #FFFFFF;
+    opacity: 0;
+    margin: 0 auto;
+    max-width: 200px;
+    transform: scale(1.5);
+    transition: opacity 0.35s, transform 0.35s;
 }
