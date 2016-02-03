@@ -18,6 +18,10 @@
 /*
  * General
  */
+html, body{
+    overflow: hidden;
+}
+
 .button{
     box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.2) inset !important;
 }
@@ -47,6 +51,7 @@
     background-color: #3c3c3b;
     color: #C2C4C4;
     padding: 0;
+    transition: transform 0.5s;
 }
 
 .infobar__wrapper{
@@ -120,6 +125,10 @@
 /*
  * Sidebar
  */
+.sidebar{
+    transition: transform 0.5s;
+}
+
 .sidebar__wrapper{
     display: table;
     width: 100%;
@@ -282,4 +291,33 @@
 .realm__link:hover .realm__description{
     opacity: 1;
     transform: scale(1);
+}
+
+
+/*
+ * Opening effect
+ */
+.view-realm .infobar,
+.view-realm .sidebar{
+    transform: translate3d(calc(200px - 500%), 0, 0);
+}
+
+.realm__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    height: 0;
+    visibility: hidden;
+    z-index: 400;
+    overflow: hidden;
+}
+
+.view-realm .realm__content--show{
+    height: 100vh;
+    pointer-events: auto;
+    visibility: visible;
 }
