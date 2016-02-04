@@ -172,6 +172,7 @@ html, body{
 .realm{
     padding: 0;
     position: relative;
+    transition: transform 0.5s;
 }
 
 .slick-list,
@@ -298,7 +299,8 @@ html, body{
  * Opening effect
  */
 .view-realm .infobar,
-.view-realm .sidebar{
+.view-realm .sidebar,
+.view-realm .realm{
     transform: translate3d(calc(200px - 500%), 0, 0);
 }
 
