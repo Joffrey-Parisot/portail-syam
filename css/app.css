@@ -301,7 +301,7 @@ html, body{
 .view-realm .infobar,
 .view-realm .sidebar,
 .view-realm .realm{
-    transform: translate3d(calc(200px - 500%), 0, 0);
+    transform: translate3d(calc(100% - 150vw), 0px, 0px)
 }
 
 .realm__content{
@@ -322,4 +322,25 @@ html, body{
     height: 100vh;
     pointer-events: auto;
     visibility: visible;
+}
+
+.placeholder {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: red;
+    transform-origin: 0 0;
+}
+
+.placeholder.placeholder--trans-in {
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.placeholder.placeholder--trans-out {
+    transition: transform 0.5s;
 }
