@@ -61,8 +61,8 @@ $('.realm__link').on('click', function(e){
         realmLeftEl = document.getElementById('realm-left'),
         realmRightEl = document.getElementById('realm-right'),
         realmLinks = document.querySelectorAll('.realm__link'),
-        realmContentLeftEl = document.getElementById('realm-content-left'),
-        realmContentRightEl = document.getElementById('realm-content-right'),
+        realmContent = document.getElementById('realm-content'),
+        realmContentItems = realmContent.querySelectorAll('.realm__item'),
         closeCtrl = document.querySelector('.close-button'),
         current = -1,
         lockScroll = false, xscroll, yscroll,
@@ -183,23 +183,26 @@ $('.realm__link').on('click', function(e){
             window.addEventListener('scroll', noscroll);
         }, 25);
 
-        /*onEndTransition(dummy, function() {
+        onEndTransition(dummy, function() {
             // add transition class
-            classie.remove(dummy, 'placeholder--trans-in');
-            classie.add(dummy, 'placeholder--trans-out');
+            dummy.classList.remove('placeholder--trans-in');
+            dummy.classList.add('placeholder--trans-out');
+
+            console.log(current);
+
             // position the content container
-            contentItemsContainer.style.top = scrollY() + 'px';
+            realmContent.style.top = scrollY() + 'px';
             // show the main content container
-            classie.add(contentItemsContainer, 'content--show');
+            realmContent.classList.add('realm__content--show');
             // show content item:
-            classie.add(contentItems[current], 'content__item--show');
+            realmContentItems[current].classList.add('realm__item--show');
             // show close control
-            classie.add(closeCtrl, 'close-button--show');
+            closeCtrl.classList.add('close-button--show');
             // sets overflow hidden to the body and allows the switch to the content scroll
-            classie.addClass(bodyEl, 'noscroll');
+            bodyEl.classList.add('noscroll');
 
             isAnimating = false;
-        });*/
+        });
     }
 
     function noscroll() {
