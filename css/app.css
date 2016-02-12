@@ -46,7 +46,7 @@ html, body{
 }
 
 .main{
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 
@@ -55,6 +55,10 @@ html, body{
  */
 .sidebar{
     transition: transform 0.5s;
+}
+
+.sidebar:hover{
+    overflow-y: scroll;
 }
 
 .sidebar__wrapper{
@@ -230,7 +234,7 @@ html, body{
 .footer{
     background-color: #3c3c3b;
     color: #C2C4C4;
-    height: 60px;
+    height: 40px;
     padding: 10px 0;
     position: absolute;
     bottom: 0;
@@ -242,7 +246,7 @@ html, body{
  * Content
  */
 .realm__content{
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 .realm__item{
