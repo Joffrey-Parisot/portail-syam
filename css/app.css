@@ -39,86 +39,14 @@ html, body{
 }
 
 .sidebar,
-.realm{
+.realm,
+.realm__sidebar,
+.realm__slider{
     background-color: #FFFFFF;
 }
 
-
-/*
- * Infobar
- */
-.infobar{
-    background-color: #3c3c3b;
-    color: #C2C4C4;
-    padding: 0;
-    transition: transform 0.5s;
-}
-
-.infobar__wrapper{
-    display: table;
-    width: 100%;
-}
-
-.infobar__container{
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.infobar__submenu{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.infobar__item.is-active{
-    background-color: #6c6d70;
-}
-
-.infobar__item:first-child{
-    border-top: 1px solid #6c6d70;
-}
-
-.infobar__item:last-child{
-    border-top: 1px solid #6c6d70;
-    border-bottom: 1px solid #6c6d70;
-}
-
-.infobar__icon{
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-    font-size: 45px;
-    line-height: 45px;
-    padding: 10px 0;
-    margin: 0;
-}
-
-.menu{
-    background-color: #6c6d70;
-    border: none;
-    border-top: 1px solid #6c6d70;
-    min-width: 300px;
-    padding: 30px;
-    top: -1px;
-}
-
-.infobar__subsubmenu{
-    display: table !important;
-}
-
-.infobar__infos{
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.infos__title{
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.infos__description{
-
+.main{
+    padding-bottom: 60px;
 }
 
 
@@ -165,6 +93,7 @@ html, body{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
 
 /*
  * Sliders
@@ -296,24 +225,48 @@ html, body{
 
 
 /*
+ * Footer
+ */
+.footer{
+    background-color: #3c3c3b;
+    color: #C2C4C4;
+    height: 60px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*
  * Content
  */
+.realm__content{
+    padding-bottom: 60px;
+}
+
 .realm__item{
     pointer-events: none;
     overflow: hidden;
     height: 0;
     opacity: 0;
     width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding: 0;
+}
+
+.realm__sidebar{
+
+}
+
+.realm__slider{
+    padding: 0;
+
 }
 
 
 /*
  * Opening effect
  */
-.view-realm .infobar,
 .view-realm .sidebar,
 .view-realm .realm{
     transform: translate3d(calc(100% - 150vw), 0px, 0px)
@@ -334,7 +287,7 @@ html, body{
 }
 
 .view-realm .realm__content--show{
-    height: 100vh;
+    height: 100%;
     pointer-events: auto;
     visibility: visible;
 }
@@ -347,8 +300,8 @@ html, body{
     z-index: 100;
     top: 0;
     left: 0;
-    background: red;
     transform-origin: 0 0;
+    background-color: rgba(149, 193, 31, 0.7);
 }
 
 .placeholder.placeholder--trans-in {
@@ -362,8 +315,7 @@ html, body{
 
 .realm__item--show{
     transition: opacity 0.6s;
-    height: auto;
-    min-height: 100vh;
+    height: 100%;
     opacity: 1;
     pointer-events: auto;
 }

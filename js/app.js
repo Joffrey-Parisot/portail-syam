@@ -5,6 +5,7 @@ $('.realm__slider--left').slick({
     slidesToScroll: 1,
     lazyLoad: 'progressive',
     autoplay: true,
+    autoplaySpeed: 5000,
     fade: true,
     arrows: false,
     pauseOnHover: false
@@ -15,6 +16,18 @@ $('.realm__slider--right').slick({
     slidesToScroll: 1,
     lazyLoad: 'progressive',
     autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+    pauseOnHover: false
+});
+
+$('.realm__contentslider--left').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: 'progressive',
+    autoplay: false,
+    autoplaySpeed: 5000,
     fade: true,
     arrows: false,
     pauseOnHover: false
@@ -162,6 +175,7 @@ $('.realm__link').on('click', function(e){
 
         // set width/heigth and position
         dummy.style.width = item.parentNode.offsetWidth + 'px';
+        //dummy.style.width = getViewport('x') + 'px';
         dummy.style.height = item.parentNode.offsetHeight + 'px';
         dummy.style.transform = 'translate3d(' + (item.parentNode.offsetLeft + (item.parentNode.offsetWidth / 4)) + 'px, ' + (item.parentNode.offsetHeight / 4) + 'px, 0px) scale3d(0.5, 0.5, 1)';
 
@@ -197,11 +211,16 @@ $('.realm__link').on('click', function(e){
             // show content item:
             realmContentItems[current].classList.add('realm__item--show');
             // show close control
-            closeCtrl.classList.add('close-button--show');
+            //closeCtrl.classList.add('close-button--show');
             // sets overflow hidden to the body and allows the switch to the content scroll
             bodyEl.classList.add('noscroll');
 
             isAnimating = false;
+
+            console.log(realmContentItems[current]);
+
+            // play the slider
+            $('.realm__contentslider--left').slick('slickPlay');
         });
     }
 
